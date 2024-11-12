@@ -1,18 +1,22 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="drf-excel-export",  # Name of the package
-    version="0.1.0",  # Initial version
-    description="A tool to export Django REST Framework API documentation in Excel format",
+    name="drf-excel-export",
+    version="0.1.0",
+    description="A tool to export Django REST Framework API documentation to Excel",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Donald Programmeur",  # Replace with your name
-    author_email="donaldtedom0@gmail.com",  # Replace with your email
-    url="https://github.com/donaldte/drf-excel-export",  # Replace with the actual URL
+    author="Donald Programmeur",
+    author_email="donaldtedom0@gmail.com",
+    url="https://github.com/donaldte/drf-excel-export",  # Link to your GitHub repo
     packages=find_packages(),
     install_requires=[
-        "drf-spectacular",  # For generating API schema
-        "openpyxl",         # For handling Excel file generation
+        "django",
+        "djangorestframework",
+        "openpyxl",
+        "drf-spectacular", 
+        "drf-yasg", 
+        "pyyaml"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

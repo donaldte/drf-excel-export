@@ -1,0 +1,8 @@
+env
+/env 
+drf_excel_export.egg-info
+/drf_excel_export.egg-info
+*.pyc
+*.pyo
+.pytest_cache
+__pycache__

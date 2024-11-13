@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="drf-excel-export",
-    version="0.1.0",
+    version="0.1.1",   
     description="A tool to export Django REST Framework API documentation to Excel",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",

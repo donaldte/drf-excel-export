@@ -68,7 +68,7 @@
 To generate the API documentation in Excel format, run the following management command from your Django project’s root directory:
 
 ```bash
-python manage.py export-excel
+python manage.py export_excel
 ```
 
 This command will generate an Excel file, `api_documentation.xlsx`, in the current directory, containing details of all API endpoints.
@@ -102,5 +102,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For support or questions, please open an issue on the [GitHub repository](https://github.com/donaldte/drf-excel-export) or contact the author via [email][mailto:donaldtedom0@gmail.com].
+For support or questions, please open an issue on the [GitHub repository](https://github.com/donaldte/drf-excel-export) or contact the author via [email](mailto:donaldtedom0@gmail.com).
 

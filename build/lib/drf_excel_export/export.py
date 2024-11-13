@@ -3,6 +3,8 @@ import yaml
 from openpyxl import Workbook
 import django
 from django.conf import settings
+from drf_spectacular.generators import SchemaGenerator  # Import for drf-spectacular
+
 
 
 # Configure logging
@@ -50,11 +52,12 @@ def generate_api_schema():
     Generates the OpenAPI schema for the DRF API using drf-spectacular or drf-yasg.
     """
     if spectacular_available:
-        # If drf-spectacular is installed, use it to generate the schema
-        schema = SpectacularSchema()
+        # Use SchemaGenerator for drf-spectacular to get the schema as a dictionary
+        generator = SchemaGenerator()
+        schema = generator.get_schema(request=None, public=True)
         logger.info("Using drf-spectacular to generate the schema.")
     elif yasg_available:
-        # If drf-yasg is installed, use it to generate the schema
+        # Use OpenAPISchemaGenerator for drf-yasg to get the schema as a dictionary
         generator = OpenAPISchemaGenerator(
             info=Info(
                 title="API Documentation",
